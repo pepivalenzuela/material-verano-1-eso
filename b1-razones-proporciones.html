@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Razones y proporciones · 1º ESO</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+
+    :root{--color:#1565c0;--color-c:#e3f2fd;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
+    nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
+    .hero{background:linear-gradient(135deg,var(--color),#0d47a1);color:white;padding:1.8rem 1.5rem 1.6rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.25rem .9rem;font-size:.8rem;letter-spacing:.06em;margin-bottom:.7rem}
+    .hero h1{font-size:1.6rem}
+    main{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem}
+    .seccion{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.6rem 1.8rem;margin-bottom:1.8rem}
+    .seccion h2{font-size:1.05rem;color:var(--color);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--color-c)}
+    .seccion h3{font-size:.95rem;color:#333;margin:1rem 0 .4rem}
+    .seccion p{margin-bottom:.8rem;font-size:.95rem}
+    .seccion ul{margin:.3rem 0 .8rem 1.2rem} .seccion li{margin-bottom:.4rem;font-size:.94rem}
+    .ejemplo{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.93rem}
+    .ejemplo strong{color:var(--color)}
+    .nota{background:#fff8e1;border-left:4px solid #f9a825;border-radius:8px;padding:.7rem 1rem;margin:.8rem 0;font-size:.87rem;color:#4e3a00}
+    .regla-box{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+    .regla-box ol{margin:.5rem 0 0 1.2rem} .regla-box li{margin-bottom:.3rem;font-size:.95rem}
+    .estrategia{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:1rem 1.2rem;margin:.8rem 0;font-size:.94rem}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.8rem 0}
+    th{background:var(--color);color:white;padding:.5rem .7rem;text-align:left}
+    td{padding:.45rem .7rem;border-bottom:1px solid #eee}
+    tr:nth-child(even) td{background:#fafafa}
+    #ejercicios-container .ejercicio{border:1.5px solid #e0e0e0;border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.2rem;background:#fafafa}
+    .dificultad{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-bottom:.5rem}
+    .d1{background:#e8f5e9;color:#2e7d32} .d2{background:#fff8e1;color:#e65100} .d3{background:#fce4ec;color:#880e4f}
+    .enunciado{font-size:.96rem;margin-bottom:.9rem;font-weight:500;line-height:1.7}
+    .opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}
+    .opcion{display:flex;align-items:center;gap:.7rem;padding:.55rem .9rem;border-radius:8px;border:1.5px solid #ddd;background:white;cursor:pointer;font-size:.93rem;transition:border-color .15s,background .15s}
+    .opcion:hover{border-color:var(--color);background:var(--color-c)}
+    .opcion input[type=radio]{accent-color:var(--color)}
+    .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
+    .btn-comprobar:hover{background:#0d47a1}
+    .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
+    .feedback.correcto{background:var(--color-c);color:#0d47a1;border-left:4px solid var(--color)}
+    .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
+    .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
+    .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
+    .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+    .completado-msg{display:none;background:var(--color-c);color:#0d47a1;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    .btn-nav:hover{background:var(--color-c)}
+    .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
+  </style>
+</head>
+<body>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque1-hub.html">Bloque 1</a><span>·</span><strong>Razones y proporciones</strong></nav>
+<div class="hero"><div class="badge">Bloque 1 · Proporcionalidad</div><h1>⚖️ Razones y proporciones</h1></div>
+<main>
+<div class="seccion">
+  <h2>📖 Razones y proporciones</h2>
+  <h3>Razón</h3>
+  <p>La <strong>razón</strong> entre dos cantidades \(a\) y \(b\) es el cociente \(\dfrac{a}{b}\). Expresa cuántas veces cabe \(b\) en \(a\).</p>
+  <h3>Proporción</h3>
+  <p>Dos razones iguales forman una proporción: \(\dfrac{a}{b}=\dfrac{c}{d}\). La <strong>propiedad fundamental</strong> es \(a\cdot d = b\cdot c\) (productos cruzados).</p>
+  <div class="ejemplo"><strong>Hallar el término desconocido:</strong> \(\dfrac{3}{4}=\dfrac{9}{x}\)<br>
+  \(3\cdot x = 4\cdot9 \Rightarrow 3x=36 \Rightarrow x=12\)</div>
+  <h3>Proporcionalidad directa e inversa</h3>
+  <ul>
+    <li><strong>Directa:</strong> \(y=kx\) — al doblar \(x\), se dobla \(y\). Tabla: cociente \(y/x\) constante.</li>
+    <li><strong>Inversa:</strong> \(xy=k\) — al doblar \(x\), se divide \(y\) entre 2. Tabla: producto \(xy\) constante.</li>
+  </ul>
+  <div class="nota">⚠️ La regla de tres directa: \(\frac{a_1}{b_1}=\frac{a_2}{b_2}\). La regla de tres inversa: \(a_1\cdot b_1=a_2\cdot b_2\).</div>
+</div>
+<div class="seccion">
+  <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
+  <div id="ejercicios-container"></div>
+  <button class="nueva-serie" onclick="nuevaSerie()">↻ Nueva serie de ejercicios</button>
+</div>
+<div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
+<div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
+<div class="nav-modulos">
+  <a href="bloque1-hub.html" class="btn-nav">← Bloque 1</a>
+  <a href="b1-porcentajes.html" class="btn-nav">Siguiente: Porcentajes →</a>
+</div>
+</main>
+<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
+<script>
+const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_1ESO';
+const MODULE_ID='b1-raz', SESSION_KEY='modulos_1eso_b1', BLOQUE='b1';
+const BANCO=[{"niv": 1, "tex": "¿Cuánto vale \\(x\\) en la proporción \\(\\dfrac{3}{4}=\\dfrac{9}{x}\\)?", "ops": [{"t": "6", "ok": 0}, {"t": "12", "ok": 1}, {"t": "8", "ok": 0}, {"t": "16", "ok": 0}], "exp": "Productos cruzados: \\(3x=36 \\Rightarrow x=12\\)."}, {"niv": 1, "tex": "Si \\(4\\) libretas cuestan \\(6\\) €, ¿cuánto cuestan \\(10\\) libretas?", "ops": [{"t": "12 €", "ok": 0}, {"t": "15 €", "ok": 1}, {"t": "14 €", "ok": 0}, {"t": "20 €", "ok": 0}], "exp": "Proporcionalidad directa: \\(\\frac{4}{6}=\\frac{10}{x} \\Rightarrow x=15\\) €."}, {"niv": 1, "tex": "¿Es proporcionalidad directa o inversa? «A más velocidad, menos tiempo en recorrer la misma distancia».", "ops": [{"t": "Directa", "ok": 0}, {"t": "Inversa", "ok": 1}, {"t": "Ninguna", "ok": 0}, {"t": "Las dos", "ok": 0}], "exp": "Inversa: velocidad × tiempo = distancia (constante). Al doblar la velocidad, el tiempo se divide entre 2."}, {"niv": 1, "tex": "\\(8\\) obreros construyen un muro en \\(6\\) días. ¿Cuántos días tardarían \\(4\\) obreros?", "ops": [{"t": "3 días", "ok": 0}, {"t": "12 días", "ok": 1}, {"t": "8 días", "ok": 0}, {"t": "24 días", "ok": 0}], "exp": "Inversa: \\(8\\times6=4\\times x \\Rightarrow x=12\\) días."}, {"niv": 1, "tex": "Una tabla de valores tiene \\(x: 2, 4, 6\\) e \\(y: 5, 10, 15\\). ¿Qué tipo de proporcionalidad es?", "ops": [{"t": "Inversa, producto constante", "ok": 0}, {"t": "Directa, cociente \\(y/x=2{,}5\\) constante", "ok": 1}, {"t": "No es proporcional", "ok": 0}, {"t": "Directa con \\(k=5\\)", "ok": 0}], "exp": "\\(y/x=5/2=10/4=15/6=2{,}5\\). Cociente constante → proporcionalidad directa con \\(k=2{,}5\\)."}, {"niv": 1, "tex": "¿Cuánto vale \\(x\\) en \\(\\dfrac{5}{8}=\\dfrac{15}{x}\\)?", "ops": [{"t": "20", "ok": 0}, {"t": "24", "ok": 1}, {"t": "18", "ok": 0}, {"t": "30", "ok": 0}], "exp": "\\(5x=120 \\Rightarrow x=24\\)."}, {"niv": 1, "tex": "Si \\(3\\) kg de manzanas cuestan \\(4{,}50\\) €, ¿cuánto cuestan \\(5\\) kg?", "ops": [{"t": "6 €", "ok": 0}, {"t": "7{,}50 €", "ok": 1}, {"t": "8 €", "ok": 0}, {"t": "9 €", "ok": 0}], "exp": "\\(\\frac{3}{4{,}50}=\\frac{5}{x} \\Rightarrow x=\\frac{5\\times4{,}50}{3}=7{,}50\\) €."}, {"niv": 1, "tex": "Una tabla tiene \\(x: 3, 6, 9\\) e \\(y: 8, 4, \\frac{8}{3}\\). ¿Es directa o inversa?", "ops": [{"t": "Directa", "ok": 0}, {"t": "Inversa, \\(xy=24\\)", "ok": 1}, {"t": "Ninguna", "ok": 0}, {"t": "Directa con \\(k=3\\)", "ok": 0}], "exp": "\\(3\\times8=6\\times4=9\\times\\frac{8}{3}=24\\). Producto constante → proporcionalidad inversa."}, {"niv": 2, "tex": "Un grifo llena un depósito en \\(4\\) horas. ¿Cuántas horas tardarían \\(3\\) grifos iguales?", "ops": [{"t": "12 h", "ok": 0}, {"t": "1{,}33 h", "ok": 1}, {"t": "2 h", "ok": 0}, {"t": "3 h", "ok": 0}], "exp": "Inversa: \\(1\\times4=3\\times x \\Rightarrow x=\\frac{4}{3}\\approx1{,}33\\) h."}, {"niv": 2, "tex": "En un mapa a escala \\(1{:}50000\\), dos ciudades están a \\(6\\) cm. ¿Cuál es la distancia real en km?", "ops": [{"t": "3 km", "ok": 0}, {"t": "30 km", "ok": 0}, {"t": "3 km", "ok": 0}, {"t": "3 km", "ok": 0}], "exp": "\\(6\\text{ cm}\\times50000=300000\\text{ cm}=3000\\text{ m}=3\\text{ km}\\)."}, {"niv": 2, "tex": "En una clase, la razón chicos:chicas es \\(3{:}4\\). Si hay \\(28\\) alumnos en total, ¿cuántos chicos hay?", "ops": [{"t": "10", "ok": 0}, {"t": "12", "ok": 1}, {"t": "14", "ok": 0}, {"t": "16", "ok": 0}], "exp": "Total partes: \\(3+4=7\\). Chicos: \\(\\frac{3}{7}\\times28=12\\)."}, {"niv": 2, "tex": "Un coche recorre \\(210\\) km con \\(15\\) litros. ¿Cuántos litros necesita para \\(350\\) km?", "ops": [{"t": "20 L", "ok": 0}, {"t": "25 L", "ok": 1}, {"t": "30 L", "ok": 0}, {"t": "18 L", "ok": 0}], "exp": "Directa: \\(\\frac{210}{15}=\\frac{350}{x} \\Rightarrow x=\\frac{350\\times15}{210}=25\\) L."}, {"niv": 2, "tex": "Tres obreros construyen una valla en \\(8\\) días trabajando \\(6\\) h/día. ¿Cuántos días tardan \\(4\\) obreros trabajando \\(9\\) h/día?", "ops": [{"t": "3 días", "ok": 0}, {"t": "4 días", "ok": 1}, {"t": "6 días", "ok": 0}, {"t": "2 días", "ok": 0}], "exp": "Trabajo total: \\(3\\times8\\times6=144\\) h-obrero. Con 4 obreros y 9 h/día: \\(144\\div(4\\times9)=4\\) días."}, {"niv": 3, "tex": "Una receta para \\(4\\) personas lleva \\(300\\) g de harina, \\(2\\) huevos y \\(150\\) ml de leche. Vas a hacerla para \\(7\\) personas. ¿Cuánto necesitas de cada ingrediente?", "ops": [{"t": "525 g · 3{,}5 huevos · 262{,}5 ml", "ok": 1}, {"t": "700 g · 4 huevos · 300 ml", "ok": 0}, {"t": "450 g · 3 huevos · 225 ml", "ok": 0}, {"t": "600 g · 4 huevos · 300 ml", "ok": 0}], "exp": "Factor: \\(\\frac{7}{4}=1{,}75\\). Harina: \\(300\\times1{,}75=525\\) g. Huevos: \\(2\\times1{,}75=3{,}5\\). Leche: \\(150\\times1{,}75=262{,}5\\) ml."}, {"niv": 3, "tex": "Un tren A tarda \\(3\\) h en cubrir una ruta y un tren B tarda \\(5\\) h. Si salen simultáneamente en sentidos opuestos desde los extremos de esa ruta de \\(480\\) km, ¿en qué punto se encuentran?", "ops": [{"t": "A recorre 180 km, B recorre 300 km", "ok": 0}, {"t": "A recorre 300 km, B recorre 180 km", "ok": 1}, {"t": "A recorre 240 km, B recorre 240 km", "ok": 0}, {"t": "A recorre 320 km, B recorre 160 km", "ok": 0}], "exp": "Velocidades: A=\\(160\\) km/h, B=\\(96\\) km/h. Se encuentran cuando \\(160t+96t=480 \\Rightarrow t=\\frac{480}{256}\\approx1{,}875\\) h. A: \\(300\\) km, B: \\(180\\) km."}, {"niv": 3, "tex": "Tres socios invierten en un negocio en proporción \\(2{:}3{:}5\\). Los beneficios son \\(8400\\) €. ¿Cuánto recibe cada socio? ¿Cuánto más recibe el mayor que el menor?", "ops": [{"t": "1680, 2520, 4200 € · diferencia 2520 €", "ok": 1}, {"t": "2000, 3000, 5000 € · diferencia 3000 €", "ok": 0}, {"t": "1400, 2100, 3500 € · diferencia 2100 €", "ok": 0}, {"t": "840, 1260, 2100 € · diferencia 1260 €", "ok": 0}], "exp": "Total partes: \\(2+3+5=10\\). Valor de 1 parte: \\(8400\\div10=840\\). Socios: \\(1680\\), \\(2520\\), \\(4200\\) €. Diferencia: \\(4200-1680=2520\\) €."}];
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
+function nuevaSerie(){
+  const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
+  const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
+  sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
+  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+}
+function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
+function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
+function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+</script>
+</body>
+</html>
