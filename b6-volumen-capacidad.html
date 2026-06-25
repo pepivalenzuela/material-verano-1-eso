@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volumen y capacidad · 1º ESO</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+
+    :root{--color:#558b2f;--color-c:#f1f8e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
+    nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
+    .hero{background:linear-gradient(135deg,var(--color),#33691e);color:white;padding:1.8rem 1.5rem 1.6rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.25rem .9rem;font-size:.8rem;letter-spacing:.06em;margin-bottom:.7rem}
+    .hero h1{font-size:1.6rem}
+    main{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem}
+    .seccion{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.6rem 1.8rem;margin-bottom:1.8rem}
+    .seccion h2{font-size:1.05rem;color:var(--color);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--color-c)}
+    .seccion h3{font-size:.95rem;color:#333;margin:1rem 0 .4rem}
+    .seccion p{margin-bottom:.8rem;font-size:.95rem}
+    .seccion ul{margin:.3rem 0 .8rem 1.2rem} .seccion li{margin-bottom:.4rem;font-size:.94rem}
+    .ejemplo{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.93rem}
+    .ejemplo strong{color:var(--color)}
+    .nota{background:#fff8e1;border-left:4px solid #f9a825;border-radius:8px;padding:.7rem 1rem;margin:.8rem 0;font-size:.87rem;color:#4e3a00}
+    .regla-box{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+    .regla-box ol{margin:.5rem 0 0 1.2rem} .regla-box li{margin-bottom:.3rem;font-size:.95rem}
+    .estrategia{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:1rem 1.2rem;margin:.8rem 0;font-size:.94rem}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.8rem 0}
+    th{background:var(--color);color:white;padding:.5rem .7rem;text-align:left}
+    td{padding:.45rem .7rem;border-bottom:1px solid #eee}
+    tr:nth-child(even) td{background:#fafafa}
+    #ejercicios-container .ejercicio{border:1.5px solid #e0e0e0;border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.2rem;background:#fafafa}
+    .dificultad{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-bottom:.5rem}
+    .d1{background:#e8f5e9;color:#2e7d32} .d2{background:#fff8e1;color:#e65100} .d3{background:#fce4ec;color:#880e4f}
+    .enunciado{font-size:.96rem;margin-bottom:.9rem;font-weight:500;line-height:1.7}
+    .opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}
+    .opcion{display:flex;align-items:center;gap:.7rem;padding:.55rem .9rem;border-radius:8px;border:1.5px solid #ddd;background:white;cursor:pointer;font-size:.93rem;transition:border-color .15s,background .15s}
+    .opcion:hover{border-color:var(--color);background:var(--color-c)}
+    .opcion input[type=radio]{accent-color:var(--color)}
+    .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
+    .btn-comprobar:hover{background:#33691e}
+    .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
+    .feedback.correcto{background:var(--color-c);color:#33691e;border-left:4px solid var(--color)}
+    .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
+    .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
+    .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
+    .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+    .completado-msg{display:none;background:var(--color-c);color:#33691e;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    .btn-nav:hover{background:var(--color-c)}
+    .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
+  </style>
+</head>
+<body>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque6-hub.html">Bloque 6</a><span>·</span><strong>Volumen y capacidad</strong></nav>
+<div class="hero"><div class="badge">Bloque 6 · Medidas</div><h1>🧊 Volumen y capacidad</h1></div>
+<main>
+<div class="seccion">
+  <h2>📖 Volumen y capacidad</h2>
+  <h3>Volumen — cada paso ×1000</h3>
+  <table>
+    <tr><th>m³</th><th>dm³</th><th>cm³</th><th>mm³</th></tr>
+    <tr><td colspan="4" style="text-align:center">Entre unidades consecutivas: ×1000 (subir) o ÷1000 (bajar)</td></tr>
+  </table>
+  <h3>Capacidad — cada paso ×10</h3>
+  <table>
+    <tr><th>kL</th><th>hL</th><th>daL</th><th>L</th><th>dL</th><th>cL</th><th>mL</th></tr>
+    <tr><td colspan="7" style="text-align:center">Entre unidades consecutivas: ×10 (subir) o ÷10 (bajar)</td></tr>
+  </table>
+  <h3>Relación volumen ↔ capacidad</h3>
+  <p style="text-align:center;font-size:1.05rem;margin:1rem 0">
+    \(1\text{ L} = 1\text{ dm}^3\) · \(1\text{ mL} = 1\text{ cm}^3\) · \(1\text{ m}^3 = 1000\text{ L}\)
+  </p>
+  <h3>Volúmenes de cuerpos</h3>
+  <p>\(V_{\text{cubo}}=l^3\) · \(V_{\text{ortoedro}}=a\cdot b\cdot c\) · \(V_{\text{cilindro}}=\pi r^2 h\) · \(V_{\text{pirámide}}=\frac{1}{3}A_b\cdot h\)</p>
+  <div class="nota">⚠️ El volumen escala con el cubo de la escala lineal: si la escala es \(1{:}k\), los volúmenes están en razón \(1{:}k^3\).</div>
+</div>
+<div class="seccion">
+  <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
+  <div id="ejercicios-container"></div>
+  <button class="nueva-serie" onclick="nuevaSerie()">↻ Nueva serie de ejercicios</button>
+</div>
+<div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
+<div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
+<div class="nav-modulos">
+  <a href="b6-longitud-superficie.html" class="btn-nav">← Longitud y superficie</a>
+  <a href="bloque6-hub.html" class="btn-nav">Siguiente: Bloque 6 →</a>
+</div>
+</main>
+<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
+<script>
+const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_1ESO';
+const MODULE_ID='b6-vol', SESSION_KEY='modulos_1eso_b6', BLOQUE='b6';
+const BANCO=[{"niv": 1, "tex": "Convierte \\(2{,}5\\) m³ a litros.", "ops": [{"t": "25 L", "ok": 0}, {"t": "250 L", "ok": 0}, {"t": "2500 L", "ok": 1}, {"t": "25000 L", "ok": 0}], "exp": "\\(1\\text{ m}^3=1000\\text{ L}\\). \\(2{,}5\\times1000=2500\\) L."}, {"niv": 1, "tex": "Convierte \\(3500\\) L a m³.", "ops": [{"t": "0{,}35 m³", "ok": 0}, {"t": "3{,}5 m³", "ok": 1}, {"t": "35 m³", "ok": 0}, {"t": "350 m³", "ok": 0}], "exp": "\\(3500\\div1000=3{,}5\\) m³."}, {"niv": 1, "tex": "Convierte \\(750\\) mL a litros.", "ops": [{"t": "7{,}5 L", "ok": 0}, {"t": "75 L", "ok": 0}, {"t": "0{,}75 L", "ok": 1}, {"t": "0{,}075 L", "ok": 0}], "exp": "\\(750\\div1000=0{,}75\\) L."}, {"niv": 1, "tex": "¿Cuántos cm³ son \\(4\\) L?", "ops": [{"t": "40 cm³", "ok": 0}, {"t": "400 cm³", "ok": 0}, {"t": "4000 cm³", "ok": 1}, {"t": "40000 cm³", "ok": 0}], "exp": "\\(1\\text{ L}=1\\text{ dm}^3=1000\\text{ cm}^3\\). \\(4\\times1000=4000\\text{ cm}^3\\)."}, {"niv": 1, "tex": "Calcula el volumen de un cubo de arista \\(4\\) cm.", "ops": [{"t": "16 cm³", "ok": 0}, {"t": "48 cm³", "ok": 0}, {"t": "64 cm³", "ok": 1}, {"t": "12 cm³", "ok": 0}], "exp": "\\(V=4^3=64\\text{ cm}^3\\)."}, {"niv": 1, "tex": "Convierte \\(0{,}5\\) kL a litros.", "ops": [{"t": "5 L", "ok": 0}, {"t": "50 L", "ok": 0}, {"t": "500 L", "ok": 1}, {"t": "5000 L", "ok": 0}], "exp": "\\(0{,}5\\times1000=500\\) L."}, {"niv": 1, "tex": "Calcula el volumen de un ortoedro de \\(5\\times3\\times4\\) cm.", "ops": [{"t": "24 cm³", "ok": 0}, {"t": "47 cm³", "ok": 0}, {"t": "60 cm³", "ok": 1}, {"t": "120 cm³", "ok": 0}], "exp": "\\(V=5\\times3\\times4=60\\text{ cm}^3\\)."}, {"niv": 1, "tex": "¿Cuántos mililitros son \\(2{,}3\\) L?", "ops": [{"t": "23 mL", "ok": 0}, {"t": "230 mL", "ok": 0}, {"t": "2300 mL", "ok": 1}, {"t": "23000 mL", "ok": 0}], "exp": "\\(2{,}3\\times1000=2300\\) mL."}, {"niv": 2, "tex": "Un cubo tiene arista \\(4\\) cm. Calcula su volumen en cm³ y en mL.", "ops": [{"t": "64 cm³ · 64 mL", "ok": 1}, {"t": "64 cm³ · 0{,}064 L", "ok": 0}, {"t": "48 cm³ · 48 mL", "ok": 0}, {"t": "64 cm³ · 640 mL", "ok": 0}], "exp": "\\(V=64\\text{ cm}^3=64\\text{ mL}\\). (\\(1\\text{ cm}^3=1\\text{ mL}\\))"}, {"niv": 2, "tex": "Una piscina de \\(10\\times6\\) m y \\(1{,}5\\) m de profundidad. ¿Cuántos litros caben? ¿Cuántas horas tarda en llenarse con un grifo de \\(500\\) L/min?", "ops": [{"t": "90000 L · 3 h", "ok": 1}, {"t": "90000 L · 30 min", "ok": 0}, {"t": "9000 L · 18 min", "ok": 0}, {"t": "900000 L · 30 h", "ok": 0}], "exp": "\\(V=10\\times6\\times1{,}5=90\\text{ m}^3=90000\\text{ L}\\). Tiempo: \\(90000\\div500=180\\text{ min}=3\\text{ h}\\)."}, {"niv": 2, "tex": "Una botella de agua tiene \\(1{,}5\\) L. Una familia bebe \\(8\\) botellas al día. ¿Cuántos m³ de agua consumen en un año?", "ops": [{"t": "4{,}38 m³", "ok": 1}, {"t": "0{,}438 m³", "ok": 0}, {"t": "43{,}8 m³", "ok": 0}, {"t": "438 m³", "ok": 0}], "exp": "Diario: \\(8\\times1{,}5=12\\text{ L}\\). Anual: \\(12\\times365=4380\\text{ L}=4{,}38\\text{ m}^3\\)."}, {"niv": 2, "tex": "Un depósito cilíndrico tiene radio \\(3\\) m y altura \\(5\\) m. ¿Cuántos litros contiene? (\\(\\pi\\approx3{,}14\\))", "ops": [{"t": "141{,}3 L", "ok": 0}, {"t": "141300 L", "ok": 1}, {"t": "14130 L", "ok": 0}, {"t": "1413000 L", "ok": 0}], "exp": "\\(V=\\pi r^2h=3{,}14\\times9\\times5=141{,}3\\text{ m}^3=141300\\text{ L}\\)."}, {"niv": 2, "tex": "Un bloque de hielo cúbico de \\(20\\) cm de arista se derrite. El agua ocupa \\(920\\text{ cm}^3\\) menos que el hielo. ¿Cuántos mL de agua se obtienen?", "ops": [{"t": "7080 mL", "ok": 1}, {"t": "7200 mL", "ok": 0}, {"t": "8000 mL", "ok": 0}, {"t": "6280 mL", "ok": 0}], "exp": "\\(V_{\\text{hielo}}=20^3=8000\\text{ cm}^3\\). Agua: \\(8000-920=7080\\text{ cm}^3=7080\\text{ mL}\\)."}, {"niv": 3, "tex": "Una empresa embotella zumo en botellas de \\(75\\) cL. La fábrica produce \\(12000\\) L de zumo al día. ¿Cuántas botellas produce al día? ¿Cuántos palés de \\(600\\) botellas necesita para transportarlas?", "ops": [{"t": "16000 botellas · 26{,}7 palés", "ok": 1}, {"t": "9000 botellas · 15 palés", "ok": 0}, {"t": "16000 botellas · 32 palés", "ok": 0}, {"t": "8000 botellas · 13 palés", "ok": 0}], "exp": "\\(75\\text{ cL}=0{,}75\\text{ L}\\). Botellas: \\(12000\\div0{,}75=16000\\). Palés: \\(16000\\div600\\approx26{,}7\\) → 27 palés completos."}, {"niv": 3, "tex": "Un acuario rectangular mide \\(120\\times60\\times50\\) cm. Se llena hasta el \\(80\\%\\) de su capacidad. ¿Cuántos litros contiene? Si se añaden rocas con volumen total de \\(4{,}5\\) L, ¿cuánto sube el nivel del agua (en cm)?", "ops": [{"t": "288 L · sube 0{,}625 cm", "ok": 1}, {"t": "360 L · sube 1 cm", "ok": 0}, {"t": "288 L · sube 1{,}25 cm", "ok": 0}, {"t": "216 L · sube 0{,}5 cm", "ok": 0}], "exp": "\\(V=120\\times60\\times50=360000\\text{ cm}^3=360\\text{ L}\\). Al 80%: \\(288\\text{ L}\\). Las rocas: \\(4{,}5\\text{ L}=4500\\text{ cm}^3\\). Subida: \\(\\frac{4500}{120\\times60}=\\frac{4500}{7200}=0{,}625\\) cm."}, {"niv": 3, "tex": "Una presa tiene una capacidad de \\(850\\text{ hm}^3\\). Actualmente está al \\(62\\%\\). En verano pierde \\(2{,}5\\text{ hm}^3\\) al día por evaporación y consumo. ¿Cuántos días tardaría en vaciarse si no llueve más? ¿Cuántos litros por segundo se consumen?", "ops": [{"t": "211 días · 28{,}9 L/s", "ok": 1}, {"t": "340 días · 50 L/s", "ok": 0}, {"t": "100 días · 100 L/s", "ok": 0}, {"t": "250 días · 20 L/s", "ok": 0}], "exp": "Agua actual: \\(850\\times0{,}62=527\\text{ hm}^3\\). Días: \\(527\\div2{,}5=210{,}8\\approx211\\) días. \\(2{,}5\\text{ hm}^3/\\text{día}=2{,}5\\times10^9\\text{ L}\\div86400\\text{ s}\\approx28935\\text{ L/s}\\approx28{,}9\\text{ kL/s}\\)."}];
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
+function nuevaSerie(){
+  const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
+  const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
+  sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
+  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+}
+function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
+function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
+function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+</script>
+</body>
+</html>

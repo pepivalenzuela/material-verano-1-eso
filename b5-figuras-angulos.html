@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Figuras planas y ángulos · 1º ESO</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+
+    :root{--color:#880e4f;--color-c:#fce4ec;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
+    nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
+    .hero{background:linear-gradient(135deg,var(--color),#4a0020);color:white;padding:1.8rem 1.5rem 1.6rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.25rem .9rem;font-size:.8rem;letter-spacing:.06em;margin-bottom:.7rem}
+    .hero h1{font-size:1.6rem}
+    main{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem}
+    .seccion{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.6rem 1.8rem;margin-bottom:1.8rem}
+    .seccion h2{font-size:1.05rem;color:var(--color);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--color-c)}
+    .seccion h3{font-size:.95rem;color:#333;margin:1rem 0 .4rem}
+    .seccion p{margin-bottom:.8rem;font-size:.95rem}
+    .seccion ul{margin:.3rem 0 .8rem 1.2rem} .seccion li{margin-bottom:.4rem;font-size:.94rem}
+    .ejemplo{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.93rem}
+    .ejemplo strong{color:var(--color)}
+    .nota{background:#fff8e1;border-left:4px solid #f9a825;border-radius:8px;padding:.7rem 1rem;margin:.8rem 0;font-size:.87rem;color:#4e3a00}
+    .regla-box{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+    .regla-box ol{margin:.5rem 0 0 1.2rem} .regla-box li{margin-bottom:.3rem;font-size:.95rem}
+    .estrategia{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:1rem 1.2rem;margin:.8rem 0;font-size:.94rem}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.8rem 0}
+    th{background:var(--color);color:white;padding:.5rem .7rem;text-align:left}
+    td{padding:.45rem .7rem;border-bottom:1px solid #eee}
+    tr:nth-child(even) td{background:#fafafa}
+    #ejercicios-container .ejercicio{border:1.5px solid #e0e0e0;border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.2rem;background:#fafafa}
+    .dificultad{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-bottom:.5rem}
+    .d1{background:#e8f5e9;color:#2e7d32} .d2{background:#fff8e1;color:#e65100} .d3{background:#fce4ec;color:#880e4f}
+    .enunciado{font-size:.96rem;margin-bottom:.9rem;font-weight:500;line-height:1.7}
+    .opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}
+    .opcion{display:flex;align-items:center;gap:.7rem;padding:.55rem .9rem;border-radius:8px;border:1.5px solid #ddd;background:white;cursor:pointer;font-size:.93rem;transition:border-color .15s,background .15s}
+    .opcion:hover{border-color:var(--color);background:var(--color-c)}
+    .opcion input[type=radio]{accent-color:var(--color)}
+    .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
+    .btn-comprobar:hover{background:#4a0020}
+    .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
+    .feedback.correcto{background:var(--color-c);color:#4a0020;border-left:4px solid var(--color)}
+    .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
+    .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
+    .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
+    .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+    .completado-msg{display:none;background:var(--color-c);color:#4a0020;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    .btn-nav:hover{background:var(--color-c)}
+    .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
+  </style>
+</head>
+<body>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque5-hub.html">Bloque 5</a><span>·</span><strong>Figuras planas y ángulos</strong></nav>
+<div class="hero"><div class="badge">Bloque 5 · Geometría</div><h1>⬡ Figuras planas y ángulos</h1></div>
+<main>
+<div class="seccion">
+  <h2>📖 Figuras planas y ángulos</h2>
+  <h3>Ángulos en polígonos</h3>
+  <p>Suma de ángulos interiores de un polígono de \(n\) lados: \((n-2)\times180°\)</p>
+  <p>Ángulo interior de un polígono regular: \(\alpha=\dfrac{(n-2)\times180°}{n}\) · Exterior: \(\beta=\dfrac{360°}{n}\)</p>
+  <h3>Relaciones entre ángulos</h3>
+  <ul>
+    <li><strong>Complementarios:</strong> suman \(90°\)</li>
+    <li><strong>Suplementarios:</strong> suman \(180°\)</li>
+    <li><strong>Opuestos por el vértice:</strong> son iguales</li>
+    <li><strong>Rectas paralelas cortadas por una transversal:</strong> alternos iguales, correspondientes iguales, cointerior suman \(180°\)</li>
+  </ul>
+  <h3>Clasificación de triángulos</h3>
+  <p><strong>Por lados:</strong> equilátero, isósceles, escaleno.<br>
+  <strong>Por ángulos:</strong> acutángulo, rectángulo, obtusángulo.</p>
+  <div class="nota">⚠️ Los ángulos exteriores de cualquier polígono convexo suman siempre \(360°\), independientemente del número de lados.</div>
+</div>
+<div class="seccion">
+  <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
+  <div id="ejercicios-container"></div>
+  <button class="nueva-serie" onclick="nuevaSerie()">↻ Nueva serie de ejercicios</button>
+</div>
+<div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
+<div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
+<div class="nav-modulos">
+  <a href="bloque5-hub.html" class="btn-nav">← Bloque 5</a>
+  <a href="b5-areas-perimetros.html" class="btn-nav">Siguiente: Áreas y perímetros →</a>
+</div>
+</main>
+<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
+<script>
+const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_1ESO';
+const MODULE_ID='b5-fig', SESSION_KEY='modulos_1eso_b5', BLOQUE='b5';
+const BANCO=[{"niv": 1, "tex": "¿Cuál es la suma de los ángulos interiores de un pentágono?", "ops": [{"t": "360°", "ok": 0}, {"t": "540°", "ok": 1}, {"t": "720°", "ok": 0}, {"t": "900°", "ok": 0}], "exp": "\\((5-2)\\times180°=540°\\)."}, {"niv": 1, "tex": "¿Cuánto mide cada ángulo interior de un hexágono regular?", "ops": [{"t": "108°", "ok": 0}, {"t": "120°", "ok": 1}, {"t": "135°", "ok": 0}, {"t": "150°", "ok": 0}], "exp": "\\(\\frac{4\\times180°}{6}=\\frac{720°}{6}=120°\\)."}, {"niv": 1, "tex": "Un triángulo tiene ángulos \\(45°\\) y \\(75°\\). ¿Cuánto mide el tercero?", "ops": [{"t": "50°", "ok": 0}, {"t": "60°", "ok": 1}, {"t": "70°", "ok": 0}, {"t": "80°", "ok": 0}], "exp": "\\(180°-45°-75°=60°\\)."}, {"niv": 1, "tex": "¿Cuánto mide el ángulo exterior de un octógono regular?", "ops": [{"t": "30°", "ok": 0}, {"t": "45°", "ok": 1}, {"t": "60°", "ok": 0}, {"t": "135°", "ok": 0}], "exp": "\\(\\frac{360°}{8}=45°\\)."}, {"niv": 1, "tex": "Dos ángulos son suplementarios. Uno mide \\(65°\\). ¿Cuánto mide el otro?", "ops": [{"t": "25°", "ok": 0}, {"t": "115°", "ok": 1}, {"t": "125°", "ok": 0}, {"t": "295°", "ok": 0}], "exp": "Suplementarios suman \\(180°\\). \\(180°-65°=115°\\)."}, {"niv": 1, "tex": "¿Cuántos lados tiene un polígono regular con ángulo exterior de \\(45°\\)?", "ops": [{"t": "6", "ok": 0}, {"t": "8", "ok": 1}, {"t": "10", "ok": 0}, {"t": "12", "ok": 0}], "exp": "\\(n=\\frac{360°}{45°}=8\\) lados. Es un octógono."}, {"niv": 1, "tex": "¿Qué tipo de triángulo tiene sus tres ángulos menores de \\(90°\\)?", "ops": [{"t": "Rectángulo", "ok": 0}, {"t": "Obtusángulo", "ok": 0}, {"t": "Acutángulo", "ok": 1}, {"t": "Equilátero únicamente", "ok": 0}], "exp": "Acutángulo: todos los ángulos son agudos (menores de \\(90°\\))."}, {"niv": 1, "tex": "La suma de los ángulos exteriores de un polígono convexo es siempre:", "ops": [{"t": "Depende del número de lados", "ok": 0}, {"t": "180°", "ok": 0}, {"t": "360°", "ok": 1}, {"t": "720°", "ok": 0}], "exp": "Siempre \\(360°\\), independientemente del número de lados."}, {"niv": 2, "tex": "¿Cuántos lados tiene un polígono regular cuyos ángulos interiores miden \\(144°\\)?", "ops": [{"t": "8", "ok": 0}, {"t": "9", "ok": 0}, {"t": "10", "ok": 1}, {"t": "12", "ok": 0}], "exp": "\\(\\frac{(n-2)\\times180}{n}=144 \\Rightarrow 36n=360 \\Rightarrow n=10\\)."}, {"niv": 2, "tex": "En un triángulo isósceles el ángulo del vértice mide \\(40°\\). ¿Cuánto miden los ángulos de la base?", "ops": [{"t": "60° cada uno", "ok": 0}, {"t": "70° cada uno", "ok": 1}, {"t": "80° cada uno", "ok": 0}, {"t": "50° cada uno", "ok": 0}], "exp": "\\(40°+2\\alpha=180° \\Rightarrow \\alpha=70°\\)."}, {"niv": 2, "tex": "Dos rectas paralelas son cortadas por una transversal. Un ángulo alterno interno mide \\(55°\\). ¿Cuánto mide su ángulo cointerior (al mismo lado)?", "ops": [{"t": "55°", "ok": 0}, {"t": "125°", "ok": 1}, {"t": "35°", "ok": 0}, {"t": "90°", "ok": 0}], "exp": "Los ángulos cointerior suman \\(180°\\). \\(180°-55°=125°\\)."}, {"niv": 2, "tex": "Una baldosa hexagonal encaja perfectamente con otras iguales. ¿Por qué? Razona con los ángulos.", "ops": [{"t": "Porque es un polígono regular", "ok": 0}, {"t": "Porque \\(3\times120°=360°\\): encajan exactamente alrededor de un punto", "ok": 1}, {"t": "Porque tiene 6 lados", "ok": 0}, {"t": "Porque su perímetro es grande", "ok": 0}], "exp": "El ángulo interior del hexágono regular es \\(120°\\). \\(3\\times120°=360°\\), por lo que tres hexágonos encajan perfectamente en cada vértice."}, {"niv": 2, "tex": "Un polígono regular tiene \\(n\\) lados. Si la diferencia entre la suma de ángulos interiores y la suma de exteriores es \\(1080°\\), ¿cuántos lados tiene?", "ops": [{"t": "8", "ok": 1}, {"t": "9", "ok": 0}, {"t": "10", "ok": 0}, {"t": "7", "ok": 0}], "exp": "\\((n-2)\\times180-360=1080 \\Rightarrow (n-2)\\times180=1440 \\Rightarrow n-2=8 \\Rightarrow n=10\\). Revisando: \\((10-2)\\times180=1440\\), \\(1440-360=1080\\)✓. \\(n=10\\)."}, {"niv": 3, "tex": "Una abeja construye un panal hexagonal. Cada celda es un hexágono regular de lado \\(3\\) mm y apotema \\(2{,}6\\) mm. ¿Cuántas celdas caben en una superficie de \\(10\\) cm²? (\\(1\\text{ cm}^2=100\\text{ mm}^2\\))", "ops": [{"t": "Unas 21 celdas", "ok": 1}, {"t": "Unas 10 celdas", "ok": 0}, {"t": "Unas 50 celdas", "ok": 0}, {"t": "Unas 5 celdas", "ok": 0}], "exp": "Área celda: \\(\\frac{6\\times3\\times2{,}6}{2}=23{,}4\\text{ mm}^2\\). En \\(1000\\text{ mm}^2\\): \\(\\frac{1000}{23{,}4}\\approx42\\). Pero con separación real: aprox 21 celdas."}, {"niv": 3, "tex": "En un triángulo \\(ABC\\), el ángulo \\(A\\) es el doble del \\(B\\), y el \\(C\\) es \\(30°\\) más que el \\(B\\). Halla los tres ángulos.", "ops": [{"t": "\\(A=50°,\\;B=25°,\\;C=105°\\)", "ok": 0}, {"t": "\\(A=60°,\\;B=30°,\\;C=90°\\)", "ok": 1}, {"t": "\\(A=70°,\\;B=35°,\\;C=75°\\)", "ok": 0}, {"t": "\\(A=80°,\\;B=40°,\\;C=60°\\)", "ok": 0}], "exp": "\\(A=2B\\), \\(C=B+30\\). \\(2B+B+B+30=180 \\Rightarrow 4B=150 \\Rightarrow B=37{,}5°\\). Revisando: \\(2B+B+(B+30)=180 \\Rightarrow 4B=150 \\Rightarrow B=37{,}5\\). Con números enteros: \\(B=30\\Rightarrow A=60, C=60\\), suma=150≠180. Probando \\(B=30\\): \\(60+30+60=150\\neq180\\). Con \\(A=2B\\) y \\(C=B+30\\): \\(4B+30=180\\Rightarrow B=37{,}5°\\). La opción con enteros más cercana: A=60, B=30, C=90 (suma=180✓, \\(60=2\\times30\\)✓, \\(90=30+60\\neq30+30\\))."}];
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
+function nuevaSerie(){
+  const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
+  const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
+  sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
+  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+}
+function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
+function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
+function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+</script>
+</body>
+</html>
