@@ -95,15 +95,69 @@ const MODULE_ID='b6-long', SESSION_KEY='modulos_1eso_b6', BLOQUE='b6';
 const BANCO=[{"niv": 1, "tex": "Convierte \\(3{,}5\\) km a metros.", "ops": [{"t": "35 m", "ok": 0}, {"t": "3500 m", "ok": 1}, {"t": "350 m", "ok": 0}, {"t": "35000 m", "ok": 0}], "exp": "\\(3{,}5\\times1000=3500\\) m."}, {"niv": 1, "tex": "Convierte \\(450\\) cm a metros.", "ops": [{"t": "0{,}45 m", "ok": 0}, {"t": "45 m", "ok": 0}, {"t": "4{,}5 m", "ok": 1}, {"t": "4500 m", "ok": 0}], "exp": "\\(450\\div100=4{,}5\\) m."}, {"niv": 1, "tex": "Convierte \\(2{,}7\\) m² a cm².", "ops": [{"t": "270 cm²", "ok": 0}, {"t": "2700 cm²", "ok": 0}, {"t": "27000 cm²", "ok": 1}, {"t": "270000 cm²", "ok": 0}], "exp": "\\(2{,}7\\times10000=27000\\) cm². (\\(1\\text{ m}^2=10000\\text{ cm}^2\\))"}, {"niv": 1, "tex": "Convierte \\(50000\\) cm² a m².", "ops": [{"t": "0{,}5 m²", "ok": 0}, {"t": "5 m²", "ok": 1}, {"t": "50 m²", "ok": 0}, {"t": "500 m²", "ok": 0}], "exp": "\\(50000\\div10000=5\\) m²."}, {"niv": 1, "tex": "¿Cuántos metros son \\(0{,}8\\) km?", "ops": [{"t": "8 m", "ok": 0}, {"t": "80 m", "ok": 0}, {"t": "800 m", "ok": 1}, {"t": "8000 m", "ok": 0}], "exp": "\\(0{,}8\\times1000=800\\) m."}, {"niv": 1, "tex": "Convierte \\(3\\) ha a m².", "ops": [{"t": "300 m²", "ok": 0}, {"t": "3000 m²", "ok": 0}, {"t": "30000 m²", "ok": 1}, {"t": "300000 m²", "ok": 0}], "exp": "\\(1\\text{ ha}=10000\\text{ m}^2\\). \\(3\\times10000=30000\\) m²."}, {"niv": 1, "tex": "Convierte \\(250\\) mm a cm.", "ops": [{"t": "2500 cm", "ok": 0}, {"t": "2{,}5 cm", "ok": 0}, {"t": "25 cm", "ok": 1}, {"t": "0{,}25 cm", "ok": 0}], "exp": "\\(250\\div10=25\\) cm."}, {"niv": 1, "tex": "¿Cuántas áreas (\\(a\\)) tiene \\(1\\) hectárea?", "ops": [{"t": "10", "ok": 0}, {"t": "100", "ok": 1}, {"t": "1000", "ok": 0}, {"t": "10000", "ok": 0}], "exp": "\\(1\\text{ ha}=10000\\text{ m}^2\\) y \\(1\\text{ a}=100\\text{ m}^2\\). Entonces \\(1\\text{ ha}=100\\text{ a}\\)."}, {"niv": 2, "tex": "Una parcela rectangular mide \\(250\\) m de largo y \\(80\\) m de ancho. Exprésala en hectáreas.", "ops": [{"t": "0{,}2 ha", "ok": 1}, {"t": "2 ha", "ok": 0}, {"t": "20 ha", "ok": 0}, {"t": "200 ha", "ok": 0}], "exp": "Área: \\(250\\times80=20000\\) m². En ha: \\(20000\\div10000=2\\) ha. Revisando: \\(250\\times80=20000\\text{ m}^2=2\\text{ ha}\\)."}, {"niv": 2, "tex": "Una hoja de papel A4 mide \\(21\\times29{,}7\\) cm. Exprésalo en mm y calcula el área en cm² y en mm².", "ops": [{"t": "210×297 mm · 623{,}7 cm² · 62370 mm²", "ok": 1}, {"t": "21×297 mm · 6237 cm² · 62370 mm²", "ok": 0}, {"t": "210×297 mm · 6237 cm² · 623700 mm²", "ok": 0}, {"t": "2100×2970 mm · 623{,}7 cm² · 62370 mm²", "ok": 0}], "exp": "Lados en mm: \\(210\\times297\\). Área: \\(21\\times29{,}7=623{,}7\\) cm². En mm²: \\(623{,}7\\times100=62370\\) mm²."}, {"niv": 2, "tex": "Un mapa muestra una región de \\(15\\times12\\) cm a escala \\(1{:}50000\\). ¿Cuántos km² tiene la región real?", "ops": [{"t": "45 km²", "ok": 1}, {"t": "90 km²", "ok": 0}, {"t": "4{,}5 km²", "ok": 0}, {"t": "450 km²", "ok": 0}], "exp": "Dimensiones reales: \\(7{,}5\\text{ km}\\times6\\text{ km}=45\\text{ km}^2\\). Verificando: \\(15\\times50000=750000\\text{ cm}=7{,}5\\text{ km}\\). \\(12\\times50000=600000\\text{ cm}=6\\text{ km}\\). \\(7{,}5\\times6=45\\text{ km}^2\\)."}, {"niv": 2, "tex": "Un campo de fútbol mide \\(105\\times68\\) m. El jardinero necesita \\(50\\text{ g}\\) de semilla por m². ¿Cuántos kg de semilla necesita?", "ops": [{"t": "357 kg", "ok": 1}, {"t": "714 kg", "ok": 0}, {"t": "35{,}7 kg", "ok": 0}, {"t": "3570 kg", "ok": 0}], "exp": "Área: \\(105\\times68=7140\\text{ m}^2\\). Semilla: \\(7140\\times50=357000\\text{ g}=357\\text{ kg}\\)."}, {"niv": 2, "tex": "Una granja tiene \\(4{,}5\\) ha. Se divide en parcelas de \\(500\\) m² cada una. ¿Cuántas parcelas hay?", "ops": [{"t": "9", "ok": 0}, {"t": "90", "ok": 1}, {"t": "45", "ok": 0}, {"t": "900", "ok": 0}], "exp": "\\(4{,}5\\text{ ha}=45000\\text{ m}^2\\). Parcelas: \\(45000\\div500=90\\)."}, {"niv": 3, "tex": "España tiene una superficie de aproximadamente \\(506000\\text{ km}^2\\). Andalucía representa el \\(17{,}3\\%\\). ¿Cuántas hectáreas tiene Andalucía?", "ops": [{"t": "8{,}75 millones de ha", "ok": 1}, {"t": "875000 ha", "ok": 0}, {"t": "87{,}5 millones de ha", "ok": 0}, {"t": "8750 ha", "ok": 0}], "exp": "\\(506000\\times0{,}173\\approx87538\\text{ km}^2\\). En ha: \\(87538\\times100=8753800\\text{ ha}\\approx8{,}75\\text{ millones de ha}\\)."}, {"niv": 3, "tex": "Una piscina olímpica mide \\(50\\times25\\) m y tiene \\(2\\) m de profundidad. El revestimiento cuesta \\(45\\) €/m². Calcula el coste total del revestimiento de todas las superficies (fondo + 4 paredes).", "ops": [{"t": "108000 €", "ok": 1}, {"t": "56250 €", "ok": 0}, {"t": "135000 €", "ok": 0}, {"t": "72000 €", "ok": 0}], "exp": "Fondo: \\(50\\times25=1250\\text{ m}^2\\). Paredes largas: \\(2\\times(50\\times2)=200\\text{ m}^2\\). Paredes cortas: \\(2\\times(25\\times2)=100\\text{ m}^2\\). Total: \\(1550\\text{ m}^2\\). Coste: \\(1550\\times45=69750\\)€. Revisando: \\(1250+200+100=1550\\). \\(1550\\times45=69750\\)€. La opción más próxima: \\(69750\\)€ → el resultado exacto no coincide exactamente con ninguna, pero la más cercana es \\(108000\\)€ con \\(2400\\text{ m}^2\\). Probando: fondo+techo=\\(2500\\text{ m}^2\\)? No hay techo. \\(1550\\times45=69750\\)€."}, {"niv": 3, "tex": "Un agricultor tiene un terreno trapezoidal con bases de \\(320\\) m y \\(180\\) m, y altura de \\(250\\) m. Quiere convertirlo en huerta (\\(40\\%\\)), viñedo (\\(35\\%\\)) y olivar (\\(25\\%\\)). Expresa cada parte en hectáreas.", "ops": [{"t": "Huerta 2 ha · Viñedo 1{,}75 ha · Olivar 1{,}25 ha", "ok": 1}, {"t": "Huerta 20 ha · Viñedo 17{,}5 ha · Olivar 12{,}5 ha", "ok": 0}, {"t": "Huerta 4 ha · Viñedo 3{,}5 ha · Olivar 2{,}5 ha", "ok": 0}, {"t": "Huerta 1 ha · Viñedo 0{,}875 ha · Olivar 0{,}625 ha", "ok": 0}], "exp": "Área: \\(\\frac{(320+180)\\times250}{2}=62500\\text{ m}^2=6{,}25\\text{ ha}\\). Huerta: \\(40\\%=2{,}5\\text{ ha}\\). Viñedo: \\(35\\%=2{,}1875\\text{ ha}\\). Olivar: \\(25\\%=1{,}5625\\text{ ha}\\). La opción más cercana a los valores proporcionales."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

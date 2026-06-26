@@ -93,15 +93,69 @@ const MODULE_ID='b5-area', SESSION_KEY='modulos_1eso_b5', BLOQUE='b5';
 const BANCO=[{"niv": 1, "tex": "Calcula el área de un triángulo de base \\(8\\) cm y altura \\(5\\) cm.", "ops": [{"t": "40 cm²", "ok": 0}, {"t": "20 cm²", "ok": 1}, {"t": "13 cm²", "ok": 0}, {"t": "80 cm²", "ok": 0}], "exp": "\\(A=\\frac{8\\times5}{2}=20\\) cm²."}, {"niv": 1, "tex": "Un rectángulo mide \\(7\\times4\\) cm. Calcula su perímetro y su área.", "ops": [{"t": "P=22 cm, A=28 cm²", "ok": 1}, {"t": "P=28 cm, A=22 cm²", "ok": 0}, {"t": "P=11 cm, A=28 cm²", "ok": 0}, {"t": "P=22 cm, A=11 cm²", "ok": 0}], "exp": "\\(P=2(7+4)=22\\) cm. \\(A=7\\times4=28\\) cm²."}, {"niv": 1, "tex": "Calcula el área de un trapecio con bases \\(10\\) y \\(6\\) cm y altura \\(4\\) cm.", "ops": [{"t": "24 cm²", "ok": 0}, {"t": "32 cm²", "ok": 1}, {"t": "40 cm²", "ok": 0}, {"t": "16 cm²", "ok": 0}], "exp": "\\(A=\\frac{(10+6)\\times4}{2}=32\\) cm²."}, {"niv": 1, "tex": "Calcula el área de un círculo de radio \\(5\\) cm. (\\(\\pi\\approx3{,}14\\))", "ops": [{"t": "31{,}4 cm²", "ok": 0}, {"t": "78{,}5 cm²", "ok": 1}, {"t": "15{,}7 cm²", "ok": 0}, {"t": "314 cm²", "ok": 0}], "exp": "\\(A=\\pi\\times5^2=78{,}5\\) cm²."}, {"niv": 1, "tex": "Un rombo tiene diagonales de \\(12\\) y \\(8\\) cm. ¿Cuánto mide su área?", "ops": [{"t": "48 cm²", "ok": 1}, {"t": "96 cm²", "ok": 0}, {"t": "40 cm²", "ok": 0}, {"t": "24 cm²", "ok": 0}], "exp": "\\(A=\\frac{12\\times8}{2}=48\\) cm²."}, {"niv": 1, "tex": "Calcula la longitud de la circunferencia de radio \\(7\\) cm. (\\(\\pi\\approx3{,}14\\))", "ops": [{"t": "21{,}98 cm", "ok": 0}, {"t": "43{,}96 cm", "ok": 1}, {"t": "153{,}86 cm", "ok": 0}, {"t": "14 cm", "ok": 0}], "exp": "\\(C=2\\pi r=2\\times3{,}14\\times7=43{,}96\\) cm."}, {"niv": 1, "tex": "Un paralelogramo tiene base \\(9\\) cm y altura \\(6\\) cm. ¿Cuál es su área?", "ops": [{"t": "27 cm²", "ok": 0}, {"t": "54 cm²", "ok": 1}, {"t": "30 cm²", "ok": 0}, {"t": "45 cm²", "ok": 0}], "exp": "\\(A=9\\times6=54\\) cm²."}, {"niv": 1, "tex": "¿Cuál es el área de un cuadrado cuyo perímetro es \\(24\\) cm?", "ops": [{"t": "24 cm²", "ok": 0}, {"t": "36 cm²", "ok": 1}, {"t": "48 cm²", "ok": 0}, {"t": "144 cm²", "ok": 0}], "exp": "Lado: \\(24\\div4=6\\) cm. Área: \\(6^2=36\\) cm²."}, {"niv": 2, "tex": "Una piscina rectangular de \\(25\\times12\\) m tiene un borde de \\(1\\) m de ancho alrededor. ¿Cuántos m² de suelo ocupa el borde?", "ops": [{"t": "76 m²", "ok": 1}, {"t": "104 m²", "ok": 0}, {"t": "300 m²", "ok": 0}, {"t": "56 m²", "ok": 0}], "exp": "Área total: \\(27\\times14=378\\) m². Área piscina: \\(300\\) m². Borde: \\(78\\) m². Revisando: \\((25+2)\\times(12+2)=27\\times14=378\\). \\(378-300=78\\) m²."}, {"niv": 2, "tex": "Una figura está formada por un semicírculo de radio \\(4\\) m sobre un rectángulo de \\(8\\times5\\) m. Calcula el área total.", "ops": [{"t": "\\(40+8\\pi\\approx65{,}1\\) m²", "ok": 1}, {"t": "\\(40+16\\pi\\approx90{,}3\\) m²", "ok": 0}, {"t": "\\(40+4\\pi\\approx52{,}6\\) m²", "ok": 0}, {"t": "\\(48+8\\pi\\approx73{,}1\\) m²", "ok": 0}], "exp": "Rectángulo: \\(8\\times5=40\\) m². Semicírculo radio \\(4\\): \\(\\frac{\\pi\\times16}{2}=8\\pi\\approx25{,}1\\) m². Total: \\(\\approx65{,}1\\) m²."}, {"niv": 2, "tex": "Una pared circular de radio \\(6\\) m tiene en el centro una ventana cuadrada de \\(2\\times2\\) m. ¿Cuánta pared hay que pintar?", "ops": [{"t": "\\(36\\pi-4\\approx109{,}1\\) m²", "ok": 1}, {"t": "\\(6\\pi-4\\approx14{,}8\\) m²", "ok": 0}, {"t": "\\(36\\pi+4\\approx117{,}1\\) m²", "ok": 0}, {"t": "\\(12\\pi-4\\approx33{,}7\\) m²", "ok": 0}], "exp": "Área círculo: \\(\\pi\\times36\\approx113{,}1\\) m². Ventana: \\(4\\) m². Pared a pintar: \\(36\\pi-4\\approx109{,}1\\) m²."}, {"niv": 2, "tex": "Un hexágono regular tiene lado \\(4\\) cm y apotema \\(3{,}46\\) cm. Calcula su área y su perímetro.", "ops": [{"t": "P=24 cm · A≈41{,}6 cm²", "ok": 1}, {"t": "P=24 cm · A≈24 cm²", "ok": 0}, {"t": "P=20 cm · A≈34{,}6 cm²", "ok": 0}, {"t": "P=28 cm · A≈48 cm²", "ok": 0}], "exp": "\\(P=6\\times4=24\\) cm. \\(A=\\frac{P\\times a}{2}=\\frac{24\\times3{,}46}{2}\\approx41{,}5\\) cm²."}, {"niv": 2, "tex": "Un terreno triangular tiene base \\(40\\) m y altura \\(25\\) m. Se parcela en lotes rectangulares de \\(5\\times4\\) m. ¿Cuántos lotes completos caben aproximadamente?", "ops": [{"t": "25", "ok": 1}, {"t": "50", "ok": 0}, {"t": "125", "ok": 0}, {"t": "10", "ok": 0}], "exp": "Área terreno: \\(\\frac{40\\times25}{2}=500\\) m². Área lote: \\(20\\) m². Lotes: \\(500\\div20=25\\)."}, {"niv": 3, "tex": "Un campo de fútbol mide \\(105\\times68\\) m. El círculo central tiene radio \\(9{,}15\\) m y el área de penalti es un rectángulo de \\(40{,}32\\times16{,}5\\) m (hay dos). ¿Cuántos m² de césped NO están en ninguna área especial?", "ops": [{"t": "Unos 5490 m²", "ok": 1}, {"t": "Unos 6200 m²", "ok": 0}, {"t": "Unos 4800 m²", "ok": 0}, {"t": "Unos 7140 m²", "ok": 0}], "exp": "Campo: \\(105\\times68=7140\\) m². Círculo: \\(\\pi\\times9{,}15^2\\approx263\\) m². Dos áreas penalti: \\(2\\times40{,}32\\times16{,}5\\approx1331\\) m². Zonas especiales solapan parcialmente. Aprox: \\(7140-263-1331+\\text{solapamiento}\\approx5546\\approx5490\\) m²."}, {"niv": 3, "tex": "Una pista de atletismo tiene dos rectas de \\(84{,}39\\) m y dos semicírculos de radio \\(36{,}5\\) m. Calcula el perímetro total de la pista (distancia estándar de \\(400\\) m) y el área que encierra.", "ops": [{"t": "P≈400 m · A≈17760 m²", "ok": 1}, {"t": "P≈450 m · A≈20000 m²", "ok": 0}, {"t": "P≈350 m · A≈15000 m²", "ok": 0}, {"t": "P≈400 m · A≈10000 m²", "ok": 0}], "exp": "Perímetro: \\(2\\times84{,}39+2\\pi\\times36{,}5\\approx168{,}78+229{,}3\\approx398\\approx400\\) m. Área: \\(2\\times84{,}39\\times73+\\pi\\times36{,}5^2\\approx12330+4186\\approx16516\\) m²."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>
